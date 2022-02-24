@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="1234.png" alt="png" height="100px" width="200px" />
+      <div class="header-right">
+        <a href="#">Biogs</a>
+        <a href="#">Biogs</a>
+        <a href="#">Biogs</a>
+        <a href="#">J0bs</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </header>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1/4</div>
+        <img src="a.jpg" style="100%" />
+        <div class="text">Caption text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2/4</div>
+        <img src="b.jpg" style="100%" />
+        <div class="text">Caption two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3/4</div>
+        <img src="c.jpg" style="100%" />
+        <div class="text">Caption three</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4/4</div>
+        <img src="d.jpg" style="100%" />
+        <div class="text">Caption four</div>
+      </div>
+      <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <div class="row">
+      <div class="column">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum
+          voluptatibus voluptates consequatur corporis, delectus eum
+          perspiciatis quae recusandae, quidem aliquam est architecto ut
+          assumenda autem consequuntur rerum reiciendis mollitia animi, magni
+          eveniet dolorem expedita dolores veritatis! Eius commodi vitae, vel
+          doloremque ullam nesciunt qui non!
+        </p>
+      </div>
+      <br />
+      <div class="column">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
+          adipisci cupiditate quaerat aspernatur facere officiis sit neque
+          nostrum nam earum vel exercitationem, fuga ad, illo architecto fugiat
+          maiores! Expedita neque maxime voluptatem amet. Deleniti at incidunt
+          labore animi voluptas reiciendis veritatis soluta, optio ipsa veniam
+          animi rerum minus maiores eligendi neque deserunt accusamus. Illo
+          ratione quisquam optio quos hic volupta.
+        </p>
+      </div>
+      <br />
+      <div class="column">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet vero
+          sint tempora cupiditate, nesciunt eos nulla nam facere consequatur
+          quidem, est deserunt. Expedita consequuntur numquam repudiandae. Unde
+          dolorum temporibus veniam consequuntur omnis officiis, atque corporis
+          inventore vel eum adipisci reiciendis quidem laborum! Eveniet ad
+          minus, maxime vero quisquam ullam rationep numquam expedita eum
+          temporibus, sed quod.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        Lorem ipsum dolor sit amet consectetur
+        <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>adipisicing
+        elit. Doloremque iusto quos soluta incidunt eveniet? Dicta, consequatur
+        maiores quia laudantium, commodi odit omnis recusandae ex molestiae vero
+        voluptatem, cum adipisci quod non. Itaque quidem rem, ducimus quibusdam
+        dicta atque laborum ut eos doloribus consequatur.
+      </div>
+    </footer>
+  </body>
+</html>
